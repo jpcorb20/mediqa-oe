@@ -2,6 +2,7 @@
 import argparse
 import json
 import os
+import shutil
 
 import requests
 import zipfile
@@ -150,9 +151,16 @@ def main(aci_bench_url, primock_url, input_file, output_file, cleanup):
     
     attach_transcript(input_file, output_file, transcript_dict)
     print(f"Attached transcripts saved to {output_file}")
+
     if cleanup:
-        print(f"Cleaning up temporary files in {TMP_DIR}")
-        os.rmdir(TMP_DIR)
+        print("Cleaning up temporary files...")
+        try:
+            shutil.rmtree(TMP_DIR)
+            print(f"Removed {TMP_DIR}")
+        except Exception as e:
+            print(f"Error removing {TMP_DIR}: {e}")
+    else:
+        print(f"Temporary files saved to {TMP_DIR}. Use --cleanup to remove them.")
 
 
 if __name__ == "__main__":
@@ -162,6 +170,6 @@ if __name__ == "__main__":
     argparser.add_argument("--input-file", type=str, default="data/orders_data.json", help="Input json file")
     argparser.add_argument("--output-file", type=str, default="data/orders_data_transcript.json", help="Output json file")
     argparser.add_argument("--cleanup", action="store_true", help="Cleanup temporary files")
-
+    
     args = argparser.parse_args()
     main(args.aci_bench_url, args.primock_url, args.input_file, args.output_file, args.cleanup)
