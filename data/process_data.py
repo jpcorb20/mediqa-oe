@@ -6,6 +6,9 @@ import shutil
 
 import requests
 import zipfile
+import nltk
+
+nltk.download('punkt_tab')
 
 ACI_BENCH_URL = "https://github.com/wyim/aci-bench/archive/refs/heads/main.zip"
 PRIMOCK_URL = "https://github.com/babylonhealth/primock57/archive/refs/heads/main.zip"
@@ -111,6 +114,35 @@ def read_primock_data(primock_path):
     print(f"Found {len(transcript_data)} transcripts in Primock data")
     return transcript_data
 
+def parse_transcript_str(transcript):
+    turns = []
+    
+    turn_id = 1
+    for turn in transcript.split("\n"):
+        turn_transcript = turn.strip()
+        if turn_transcript.startswith("[doctor]"):
+            speaker = "DOCTOR"
+            
+        elif turn_transcript.startswith("[patient]"):
+            speaker = "PATIENT"
+        elif turn_transcript.startswith("[patient_guest]"):
+            speaker = "PATIENT"
+        else:
+            print(f"Unknown speaker in transcript: {turn_transcript} using DOCTOR")
+            speaker = "DOCTOR"
+
+        # remove the speaker tag
+        turn_transcript = turn_transcript.split("]", 1)[-1].strip()
+        for s in nltk.sent_tokenize(turn_transcript):
+            turns.append({
+                "turn_id": turn_id,
+                "speaker": speaker,
+                "transcript": s
+            })
+            turn_id += 1
+
+    return turns
+            
 def attach_transcript(input_file, output_file, transcript_dict):
     with open(input_file, 'r') as f:
         original_data = json.load(f)
@@ -118,8 +150,8 @@ def attach_transcript(input_file, output_file, transcript_dict):
     for d in original_data.get("train", []):
         id = d.get("id", None)  
         if id in transcript_dict:
-            d["transcript"] = transcript_dict[id]["transcript"]
-            print(f"Attached transcript for {id}")
+            transcript = transcript_dict[id]["transcript"]
+            d["transcript"] = parse_transcript_str(transcript)
         else:
             print(f"Transcript for {id} not found in ACI Bench or Primock data")
         
@@ -147,7 +179,7 @@ def main(aci_bench_url, primock_url, input_file, output_file, cleanup):
     transcript_dict.update(read_primock_data(primock_tmp_dir))
 
     #print keys of transcript_dict
-    print(f"Found {transcript_dict.keys()} transcripts in total")
+    print(f"Found {len(transcript_dict.keys())} transcripts in total")
     
     attach_transcript(input_file, output_file, transcript_dict)
     print(f"Attached transcripts saved to {output_file}")
