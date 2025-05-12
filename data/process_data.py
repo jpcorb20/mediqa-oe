@@ -142,18 +142,29 @@ def parse_transcript_str(transcript):
             turn_id += 1
 
     return turns
-            
-def attach_transcript(input_file, output_file, transcript_dict):
-    with open(input_file, 'r') as f:
-        original_data = json.load(f)
 
-    for d in original_data.get("train", []):
+def attach_transcript_section(section, transcript_dict):
+    for d in section:
         id = d.get("id", None)  
         if id in transcript_dict:
             transcript = transcript_dict[id]["transcript"]
             d["transcript"] = parse_transcript_str(transcript)
         else:
             print(f"Transcript for {id} not found in ACI Bench or Primock data")
+
+def attach_transcript(input_file, output_file, transcript_dict):
+    with open(input_file, 'r') as f:
+        original_data = json.load(f)
+
+    train_section = original_data.get("train", [])
+    dev_section = original_data.get("dev", [])
+    test_section = original_data.get("test", [])
+    
+    # attach transcript to train, dev and test sections
+    attach_transcript_section(train_section, transcript_dict)
+    attach_transcript_section(dev_section, transcript_dict)
+    attach_transcript_section(test_section, transcript_dict)
+
         
     with open(output_file, 'w') as f:
         json.dump(original_data, f, indent=4)
