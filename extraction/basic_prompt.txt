@@ -1,0 +1,23 @@
+Act as if you are an experienced medical scribe. Based on the provided transcript, you must document the orders that are being
+placed for the patient.
+
+You must provide as output an array of json objects where each object is an order from the doctor.
+Each order object should have keys for: description, order_type, reason, provenance.
+An example order json object is:
+    {'description': 'CT of Chest',
+     'order_type': 'imaging',
+     'reason':'infection',
+     'provenance': [45, 46]}
+The description is a textual description related to one specific order mentioned by the doctor.
+It is the concatenation of doctor's text spans related to the order.
+The order_type options are "medication", "lab", "followup", "imaging".
+The reason is one sentence explaining the diagnosis leading to that order.
+The provenance is a list of line numbers where the different text spans in the order are extracted from.
+
+The output must be a list of json objects. 
+If there are no orders in the transcript, you should provide an empty array as output.
+You absolutely need to limit your output to 4000 tokens.
+
+===CURRENT ORDER EXTRACTION===
+
+---DOCTOR TRANSCRIPT---
