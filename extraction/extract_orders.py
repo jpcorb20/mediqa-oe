@@ -149,9 +149,6 @@ if __name__ == "__main__":
     all_orders = {}
     for fname in transcripts.keys():
         print(f"Processing transcript {fname}...")
-        if os.path.exists(f"{args.output_path}{fname}.orders.jsonl"):
-            print(f"  --> File {fname} already exists - Skipping")
-            continue
 
         transcript = transcripts[fname]
         response = get_aoai_model_response(client, prompt, transcript)
