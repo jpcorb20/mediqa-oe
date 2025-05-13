@@ -134,10 +134,11 @@ if __name__ == "__main__":
     argparser.add_argument("--prompt_path", type=str, help="Path to the prompt file", default=DEFAULT_PTOMPT_PATH)
     argparser.add_argument("--endpoint", type=str, help="Azure OpenAI endpoint", required=True)
     argparser.add_argument("--deployment_name", type=str, help="Azure OpenAI deployment name", required=True)
+    argparser.add_argument("--dataset", type=str, help="train or dev", default="dev")
     args = argparser.parse_args()
 
     # load the prompt and transcripts:
-    transcripts = load_transcripts(args.input_path)
+    transcripts = load_transcripts(args.input_path, args.dataset)
     with open(args.prompt_path, 'r') as f:
         prompt = f.read()
 
