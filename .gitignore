@@ -172,3 +172,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+tmp_data/
+tmp/
+**/*transcript.json
+data/test_orders_data.json
