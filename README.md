@@ -36,3 +36,7 @@ $ python data/process_data.py
 ```
 
 The script will generate the file `data/orders_data_transcript.json` 
+
+
+## Issue
+If you encounter an issue with attaching transcript. try running the `process_data.py` script with the `--cleanup` flag to remove the downloaded files.
