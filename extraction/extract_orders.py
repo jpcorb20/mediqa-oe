@@ -3,7 +3,7 @@ import json
 import argparse
 from openai import AzureOpenAI
 
-from . import Order
+from evaluation.order import Order
 
 from azure.identity import (
     AzureCliCredential,
@@ -78,6 +78,11 @@ def get_orders_from_model_response(response):
     return orders_parsed, False
 
 def write_orders_to_file(orders, output_path):
+    # check if the output directory exists
+    output_dir = os.path.dirname(output_path)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    
     with open(output_path, 'w') as f:
         f.write(json.dumps(orders, indent=4))
 
