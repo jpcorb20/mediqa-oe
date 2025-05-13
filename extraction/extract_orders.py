@@ -161,6 +161,6 @@ if __name__ == "__main__":
             orders_parsed = []
             print(f"  --> Error in transcript {fname}")
 
-        all_orders[fname] = orders_parsed
+        all_orders[fname] = [order.to_dict() for order in orders_parsed]
 
     write_orders_to_file(all_orders, args.output_path)
