@@ -14,7 +14,7 @@ from azure.identity import (
 
 TRIGGER_MESSAGE = "---ORDER EXTRACTION---"
 DEFAULT_API_VERSION = "2025-01-01-preview"
-DEFAULT_PTOMPT_PATH = "basic_prompt.txt"
+DEFAULT_PTOMPT_PATH = "extraction/basic_prompt.txt"
 DEFAULT_DATA_PATH = "data/orders_data_transcript.json"
 DEFAULT_OUT_PATH = "results/generated_orders.json"
 DEFAULT_EXECUTION_SETTINGS = {
@@ -99,12 +99,18 @@ def load_transcripts(input_path, dataset="dev"):
     with open(input_path, 'r') as f:
         data = json.loads(f.read())
 
+    fail_transcripts = []
     for elem in data[dataset]:
         transcript_id = elem["id"]
-        turns = elem["transcript"]
-        transcript_text = get_text_from_turns(turns)
-        transcripts[transcript_id] = transcript_text
+        try:
+            turns = elem["transcript"]
+            transcript_text = get_text_from_turns(turns)
+            transcripts[transcript_id] = transcript_text
+        except KeyError as e:
+            fail_transcripts.append(transcript_id)
 
+    print(f"loaded {len(transcripts)} transcripts")
+    print(f"failed to load {len(fail_transcripts)} transcripts")
     return transcripts
 
 def get_aoai_client(endpoint, deployment_name):
