@@ -1,5 +1,5 @@
 # mediqa-oe
-Codebase for Order Extraction Tasks as part of MEDIQA-OE @ ClinicalNLP (COLM 2025)
+Codebase for Order Extraction Tasks as part of MEDIQA-OE @ ClinicalNLP 2025
 
 
 # Data Statistic
