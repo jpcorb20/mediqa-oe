@@ -172,6 +172,17 @@ def attach_transcript(input_file, output_file, transcript_dict):
 def main(aci_bench_url, primock_url, input_file, output_file, cleanup):
 
 
+    if cleanup:
+        print("Cleaning up temporary files...")
+        try:
+            shutil.rmtree(TMP_DIR)
+            print(f"Removed {TMP_DIR}")
+        except Exception as e:
+            print(f"Error removing {TMP_DIR}: {e}")
+
+        print("Run the script again to download the data and add transcripts.")
+        return
+
     if not os.path.exists(TMP_DIR):
         os.makedirs(TMP_DIR)
     aci_bench_tmp_dir = os.path.join(TMP_DIR, "aci-bench")
@@ -195,15 +206,10 @@ def main(aci_bench_url, primock_url, input_file, output_file, cleanup):
     attach_transcript(input_file, output_file, transcript_dict)
     print(f"Attached transcripts saved to {output_file}")
 
-    if cleanup:
-        print("Cleaning up temporary files...")
-        try:
-            shutil.rmtree(TMP_DIR)
-            print(f"Removed {TMP_DIR}")
-        except Exception as e:
-            print(f"Error removing {TMP_DIR}: {e}")
-    else:
-        print(f"Temporary files saved to {TMP_DIR}. Use --cleanup to remove them.")
+
+
+    
+    print(f"Temporary files saved to {TMP_DIR}. Use --cleanup to remove them.")
 
 
 if __name__ == "__main__":
