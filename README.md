@@ -4,6 +4,11 @@ Codebase for Order Extraction Tasks as part of MEDIQA-OE @ ClinicalNLP (COLM 202
 
 # Data Statistic
 
+| Dataset | # Encounters | Follow-up | Imaging | Lab | Medication | Total Orders |
+|---------|--------------|-----------|---------|-----|------------|---------------|
+| Train   | 63           | 25        | 14      | 29  | 75         | 143           |
+| Dev     | 100          | 41        | 26      | 71  | 117        | 255           |
+
 # Data format description
 
 The provided dataset is a JSON file with the following structure:
