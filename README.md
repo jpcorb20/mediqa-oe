@@ -6,6 +6,37 @@ Codebase for Order Extraction Tasks as part of MEDIQA-OE @ ClinicalNLP (COLM 202
 
 # Data format description
 
+The provided dataset is a JSON file with the following structure:
+
+  {
+      "train": [
+          {
+              "id": ...,
+              "expected_orders":  [...]
+          }
+      ],
+      "dev": [...]
+  }
+Orders contain four keys: order_type, description, reason, and provenance. After attaching the transcripts from the data sources (Primock57 and ACI-Bench), it is
+
+  {
+      "train": [
+          {
+              "id": ...,
+              "expected_orders":  [...],
+              "transcript": [
+                  {
+                      "turn_id": 0,
+                      "speaker": "DOCTOR",
+                      "transcript": "..."
+                  },
+                  ...
+              ]
+          }
+      ],
+      "dev": [...]
+  }
+
 # Data processing
 
 The data only contains the annotation for orders. You need to run the `process_data` script to attach the transcript to each encounter.
