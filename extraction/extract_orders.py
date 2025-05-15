@@ -1,7 +1,7 @@
 import os
 import json
 import argparse
-from openai import AzureOpenAI
+from openai import AzureOpenAI, APIConnectionError
 
 from evaluation.order import Order
 
@@ -42,13 +42,16 @@ def get_aoai_model_response(client, prompt, transcript):
         ]
 
     # call the openai client
-    response = client.chat.completions.create(
-        model="gpt-4o",
-        messages=messages,
-        **DEFAULT_EXECUTION_SETTINGS
-    )
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o",
+            messages=messages,
+            **DEFAULT_EXECUTION_SETTINGS
+        )
+    except APIConnectionError as e:
+        return None, True
 
-    return response
+    return response, False
 
 
 def get_orders_from_model_response(response):
@@ -151,12 +154,18 @@ if __name__ == "__main__":
         print(f"Processing transcript {fname}...")
 
         transcript = transcripts[fname]
-        response = get_aoai_model_response(client, prompt, transcript)
-        orders_parsed, error = get_orders_from_model_response(response)
+        response, error = get_aoai_model_response(client, prompt, transcript)
 
         if error:
+            print(f"  --> Error getting model response for transcript {fname}")
             orders_parsed = []
-            print(f"  --> Error in transcript {fname}")
+
+        else:
+            orders_parsed, error = get_orders_from_model_response(response)
+
+            if error:
+                orders_parsed = []
+                print(f"  --> Error parsing response in transcript {fname}")
 
         all_orders[fname] = [order.to_dict() for order in orders_parsed]
 
