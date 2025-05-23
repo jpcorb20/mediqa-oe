@@ -1,4 +1,4 @@
-# mediqa-oe
+# MEDIQA-OE: Medical Order Extraction from Doctor-Patient Dialogs
 Codebase for Order Extraction Tasks as part of MEDIQA-OE @ ClinicalNLP 2025
 
 
@@ -74,8 +74,12 @@ $ python data/process_data.py
 
 The script will generate the file `data/orders_data_transcript.json` 
 
-## License
+# Evaluation
+
+Check out `evaluation/README.md` for more information on how to run local evaluation.
+
+# License
 The data here is published under Community Data License Agreement - Permissive - Version 2.0 https://cdla.dev/permissive-2-0/
 
-## Issue
+# Issue
 If you encounter an issue with attaching transcript. try running the `process_data.py` script with the `--cleanup` flag to remove the downloaded files.
