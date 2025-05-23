@@ -1,0 +1,29 @@
+{
+    "0": [
+        {
+            "order_type": "medication",
+            "description": "Aspirin 81 m oral",
+            "provenance": [0]
+        },
+        {
+            "order_type": "medication",
+            "description": "Ibuprofen oral tablet",
+            "reason": "all day long",
+            "provenance": [0]
+        }
+    ],
+    "1": [
+        {
+            "order_type": "imaging",
+            "description": "CT scan of the pelvis",
+            "reason": "Abdominal pain",
+            "provenance": [3, 4]
+        },
+        {
+            "order_type": "lab",
+            "description": "Complete blood count (CBC)",
+            "reason": "Fever and chills",
+            "provenance": [4]
+        }
+    ]
+}
