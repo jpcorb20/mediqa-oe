@@ -1,0 +1,30 @@
+{
+    "0": [
+        {
+            "order_type": "medication",
+            "description": "Aspirin 81 mg oral tablet",
+            "reason": "Headache",
+            "provenance": [0]
+        },
+        {
+            "order_type": "medication",
+            "description": "Ibuprofen 200 mg oral tablet",
+            "reason": "Headache all day long",
+            "provenance": [0, 1]
+        }
+    ],
+    "1": [
+        {
+            "order_type": "imaging",
+            "description": "CT scan of the abdomen and pelvis",
+            "reason": "Abdominal pain",
+            "provenance": [2, 3]
+        },
+        {
+            "order_type": "lab",
+            "description": "Complete blood count (CBC)",
+            "reason": "Fever and chills",
+            "provenance": [4]
+        }
+    ]
+}
