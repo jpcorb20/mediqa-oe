@@ -100,13 +100,17 @@ def parse_orders(order_list, metadata: Optional[Dict[str, Any]] = None) -> Tuple
 def evaluate(
     output_dir: str,
     truth_file: Union[str, None] = None,
-    pred_file: Union[str, None] = None
+    pred_file: Union[str, None] = None,
+    dataset: Union[str, None] = None
 ):
     """Evaluation pipeline."""
 
     # Load from files
     with open(truth_file, 'r') as f:
         truth_encounters = json.load(f)
+        if dataset is not None and dataset in truth_encounters:
+            truth_encounters = truth_encounters[dataset]
+            truth_encounters = {e['id']: e['expected_orders'] for e in truth_encounters}  # change format...
     with open(pred_file, 'r') as f:
         pred_encounters = json.load(f)
 
@@ -193,6 +197,7 @@ def evaluate(
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate order extraction with simplified approach")
     parser.add_argument("-t", "--truth", type=str, help="Truth file")
+    parser.add_argument("-d", "--dataset", type=str, help="train or dev")
     parser.add_argument("-p", "--pred", type=str, help="Prediction file")
     parser.add_argument("-o", "--output", type=str, default="test", help="Output directory path, default no output export")
     parser.add_argument("--debug", action="store_true", help="Set logging level to debug.")
@@ -206,5 +211,6 @@ if __name__ == "__main__":
     evaluate(
         args.output,
         truth_file=args.truth,
-        pred_file=args.pred
+        pred_file=args.pred,
+        dataset=args.dataset
     )
