@@ -1,6 +1,7 @@
 import os
 import json
 import argparse
+from tqdm import tqdm
 from openai import AzureOpenAI, APIConnectionError
 
 from evaluation.order import Order
@@ -23,7 +24,15 @@ DEFAULT_EXECUTION_SETTINGS = {
     "top_p": 0.0,
     "presence_penalty": 0.0,
     "frequency_penalty": 0.0,
-    "n": 1
+    "n": 1,
+}
+DEFAULT_REASONING_EXECUTION_SETTINGS = {
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "n": 1,
+    "max_completion_tokens": 24320,  # for reasoning models
 }
 
 def get_token_credential():
@@ -34,19 +43,26 @@ def get_token_credential():
     return chained_credential
 
 
-def get_aoai_model_response(client, prompt, transcript):
+def get_aoai_model_response(client, prompt, transcript, model="gpt-4o"):
     # build the messages
+    
+    if model.startswith("gpt-4"):
+        settings = DEFAULT_EXECUTION_SETTINGS.copy()
+        role = "system"
+    else:
+        settings = DEFAULT_REASONING_EXECUTION_SETTINGS.copy()
+        role = "user"
     messages = [
-            {"role": "system", "content": f"{prompt}\n{transcript}"},
-            {"role": "system", "content": f"{TRIGGER_MESSAGE}\n"},
+            {"role": role, "content": f"{prompt}\n{transcript}"},
+            {"role": role, "content": f"{TRIGGER_MESSAGE}\n"},
         ]
 
     # call the openai client
     try:
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model=model,
             messages=messages,
-            **DEFAULT_EXECUTION_SETTINGS
+            **settings
         )
     except APIConnectionError as e:
         return None, True
@@ -64,8 +80,8 @@ def get_orders_from_model_response(response):
     try:
         json_message = json.loads(raw_response) 
     except json.JSONDecodeError:
-        print(f"Error decoding JSON for file {fname}.")
-        print(f"Response content:\n {raw_response}")
+        #print(f"Error decoding JSON for file {fname}.")
+        #print(f"Response content:\n {raw_response}")
         return None, True
 
     # parse json message to order objects
@@ -80,11 +96,16 @@ def get_orders_from_model_response(response):
     
     return orders_parsed, False
 
-def write_orders_to_file(orders, output_path):
+def write_orders_to_file(orders, output_path, runid=None):
     # check if the output directory exists
     output_dir = os.path.dirname(output_path)
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
+
+    # if runid is provided, append it to the output filename
+    if runid is not None:
+        base, ext = os.path.splitext(output_path)
+        output_path = f"{base}_runid{runid}{ext}"
     
     with open(output_path, 'w') as f:
         f.write(json.dumps(orders, indent=4))
@@ -137,7 +158,9 @@ if __name__ == "__main__":
     argparser.add_argument("--prompt_path", type=str, help="Path to the prompt file", default=DEFAULT_PTOMPT_PATH)
     argparser.add_argument("--endpoint", type=str, help="Azure OpenAI endpoint", required=True)
     argparser.add_argument("--deployment_name", type=str, help="Azure OpenAI deployment name", required=True)
+    argparser.add_argument("--model", type=str, help="Model to use for order extraction", default="gpt-4o")
     argparser.add_argument("--dataset", type=str, help="train or dev", default="dev")
+    argparser.add_argument("--runids", type=int, nargs='+', default=[1], help="List of seeds to use for random operations")
     args = argparser.parse_args()
 
     # load the prompt and transcripts:
@@ -149,24 +172,34 @@ if __name__ == "__main__":
     client = get_aoai_client(args.endpoint, args.deployment_name)
 
     # run the order extraction
-    all_orders = {}
-    for fname in transcripts.keys():
-        print(f"Processing transcript {fname}...")
+    for runid in args.runids:
+        print(f"#### Running order extraction for runid {runid}...")
 
-        transcript = transcripts[fname]
-        response, error = get_aoai_model_response(client, prompt, transcript)
+        all_orders = {}
+        num_errs_model = 0
+        num_errs_parsing = 0
+        for fname in tqdm(transcripts.keys()):
+            #print(f"Processing transcript {fname}...")
 
-        if error:
-            print(f"  --> Error getting model response for transcript {fname}")
-            orders_parsed = []
-
-        else:
-            orders_parsed, error = get_orders_from_model_response(response)
+            transcript = transcripts[fname]
+            response, error = get_aoai_model_response(client, prompt, transcript, model=args.model)
 
             if error:
+                #print(f"  --> Error getting model response for transcript {fname}")
+                num_errs_model += 1
                 orders_parsed = []
-                print(f"  --> Error parsing response in transcript {fname}")
 
-        all_orders[fname] = [order.to_dict() for order in orders_parsed]
+            else:
+                orders_parsed, error = get_orders_from_model_response(response)
 
-    write_orders_to_file(all_orders, args.output_path)
+                if error:
+                    orders_parsed = []
+                    num_errs_parsing += 1
+                    #print(f"  --> Error parsing response in transcript {fname}")
+
+            all_orders[fname] = [order.to_dict() for order in orders_parsed]
+
+        write_orders_to_file(all_orders, args.output_path, runid=runid)
+        print(f"#### Finished order extraction for runid {runid}.")
+        print(f"  --> Number of errors in model response: {num_errs_model}")
+        print(f"  --> Number of errors in parsing response: {num_errs_parsing}")
