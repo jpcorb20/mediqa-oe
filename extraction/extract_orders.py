@@ -1,5 +1,6 @@
 import os
 import json
+import random
 import argparse
 from tqdm import tqdm
 from openai import AzureOpenAI, APIConnectionError
@@ -18,6 +19,7 @@ DEFAULT_API_VERSION = "2025-01-01-preview"
 DEFAULT_PTOMPT_PATH = "extraction/basic_prompt.txt"
 DEFAULT_DATA_PATH = "data/orders_data_transcript.json"
 DEFAULT_OUT_PATH = "results/generated_orders.json"
+DEFAULT_EXAMPLE_ID = "acibench_D2N093_virtassist_clinicalnlp_taskB_test1"
 DEFAULT_EXECUTION_SETTINGS = {
     "max_tokens": 4320,
     "temperature": 0.0,
@@ -42,8 +44,21 @@ def get_token_credential():
     )
     return chained_credential
 
+def load_example(data_path, encounter_id=None, dataset="train"):
+    with open(data_path, 'r') as f:
+        data = json.loads(f.read())
+    
+    data_subset = data[dataset]
+    if encounter_id is None:
+        encounter_id = random.choice(data_subset)["id"]
 
-def get_aoai_model_response(client, prompt, transcript, model="gpt-4o"):
+    single_encounter = [elem for elem in data_subset if elem["id"] == encounter_id][0]
+    transcript = get_text_from_turns(single_encounter["transcript"])
+    orders = single_encounter["expected_orders"]
+
+    return transcript, orders
+
+def get_aoai_model_response(client, prompt, transcript, model="gpt-4o", add_example=None):
     # build the messages
     
     if model.startswith("gpt-4"):
@@ -52,10 +67,31 @@ def get_aoai_model_response(client, prompt, transcript, model="gpt-4o"):
     else:
         settings = DEFAULT_REASONING_EXECUTION_SETTINGS.copy()
         role = "user"
+
+    # base message
     messages = [
-            {"role": role, "content": f"{prompt}\n{transcript}"},
-            {"role": role, "content": f"{TRIGGER_MESSAGE}\n"},
-        ]
+        {"role": role, "content": f"{prompt}\n{transcript}"},
+    ]
+    
+    # add example if provided
+    if add_example is not None:
+        transcript, orders = add_example
+        extra_message = {
+            "role": role,
+            "content": (
+                "Example of an encounter with the corresponding output we are looking for:\n"
+                "Here is the transcript:\n"
+                f"{transcript}\n"
+                "------------------------\n"
+                "Here are the expected orders:\n"
+                f"{json.dumps(orders, indent=4)}\n"
+            ),
+        }
+    
+        messages.append(extra_message)
+
+    # add the trigger message
+    messages.append({"role": role, "content": f"{TRIGGER_MESSAGE}\n"})
 
     # call the openai client
     try:
@@ -161,6 +197,7 @@ if __name__ == "__main__":
     argparser.add_argument("--model", type=str, help="Model to use for order extraction", default="gpt-4o")
     argparser.add_argument("--dataset", type=str, help="train or dev", default="dev")
     argparser.add_argument("--runids", type=int, nargs='+', default=[1], help="List of seeds to use for random operations")
+    argparser.add_argument("--example", action='store_true', help="If set, will load an example transcript and orders for the model to use as a reference")
     args = argparser.parse_args()
 
     # load the prompt and transcripts:
@@ -182,7 +219,8 @@ if __name__ == "__main__":
             #print(f"Processing transcript {fname}...")
 
             transcript = transcripts[fname]
-            response, error = get_aoai_model_response(client, prompt, transcript, model=args.model)
+            example = load_example(args.input_path) if args.example else None
+            response, error = get_aoai_model_response(client, prompt, transcript, model=args.model, add_example=example)
 
             if error:
                 #print(f"  --> Error getting model response for transcript {fname}")
