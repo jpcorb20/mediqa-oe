@@ -1,1 +1,1 @@
-command: python3 evaluate_oe.py -t test_examples/test_truth.json -p /app/input/res/pred_orders.json -o /app/output/
+command: python3 evaluate_oe.py -t /app/input/ref/ref_orders.json -p /app/input/res/pred_orders.json -o /app/output/
