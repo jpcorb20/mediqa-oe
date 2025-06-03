@@ -6,7 +6,7 @@ from metrics import Metric, compute_f1
 
 def process_list(obj: any) -> List[int]:
     if isinstance(obj, list):
-        return [int(e) for e in obj]
+        return [int(e) for e in obj if isinstance(e, int) or (isinstance(e, str) and e.isnumeric())]
     elif isinstance(obj, str):
         if obj.strip() == "":
             return []
