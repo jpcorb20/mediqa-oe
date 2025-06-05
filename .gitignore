@@ -181,3 +181,5 @@ tmp/
 data/test_orders_data.json
 evaluation/test
 evaluation.zip
+
+.hist*
