@@ -76,6 +76,8 @@ class PairingMatcher:
 
         word_overlap = 0.0
         char_lcs_score = 0.0
+        word_overlap_weight = 0.7  # Weight for word-level overlap
+        char_overlap_weight = 0.3  # Weight for character-level LCS overlap
         
         # Word-level overlap
         truth_words = truth.split()
@@ -84,17 +86,11 @@ class PairingMatcher:
             matching_words = sum(1 for word in truth_words if word in pred_words)
             word_overlap = matching_words / len(truth_words)
 
-        word_overlap_weight = 1.0
-        char_overlap_weight = 0.0
-        if self.fine_grained_pairing:
-            word_overlap_weight = 0.7
-            char_overlap_weight = 0.3
-        
-            # Character-level LCS overlap
-            if len(truth) > 0:
-                lcs_length = self._lcs_length(truth, pred)
-                char_lcs_score = lcs_length / len(truth)
-        
+        # Character-level LCS overlap
+        if len(truth) > 0:
+            lcs_length = self._lcs_length(truth, pred)
+            char_lcs_score = lcs_length / len(truth)
+    
         # Weighted combination
         return word_overlap_weight * word_overlap + char_overlap_weight * char_lcs_score
 
