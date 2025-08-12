@@ -178,6 +178,5 @@ evaluation.zip
 tmp_data/
 **/*transcript.json
 tmp/
-data/test_orders_data.json
 evaluation/test
 evaluation.zip
