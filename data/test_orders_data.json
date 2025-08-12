@@ -1,0 +1,2702 @@
+{
+    "test": [
+        {
+            "id": "primock57_1_5",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "pregnancy test",
+                    "reason": "could just be something related to your, you know, a pregnancy-related cause",
+                    "provenance": [
+                        148,
+                        161
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "Paracetamol",
+                    "reason": "tummy pain",
+                    "provenance": [
+                        163,
+                        166
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "Trimethoprim one tablet twice a day for three day",
+                    "reason": "could just be a urine infection",
+                    "provenance": [
+                        146,
+                        174,
+                        175
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N188_aci_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "meloxicam fifteen milligrams once a day",
+                    "reason": "acute right ankle sprain",
+                    "provenance": [
+                        58
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_2_1",
+            "expected_orders": []
+        },
+        {
+            "id": "acibench_D2N079_aci_valid",
+            "expected_orders": [
+                {
+                    "order_type": "imaging",
+                    "description": "mri for your left shoulder left shoulder",
+                    "reason": "rotator cuff tendinopathy",
+                    "provenance": [
+                        27
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "follow-up after you you do your physical therapy",
+                    "reason": null,
+                    "provenance": [
+                        35
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N069_virtassist_valid",
+            "expected_orders": [
+                {
+                    "order_type": "followup",
+                    "description": "come back about a week",
+                    "reason": "acute medial meniscus sprain right now or strain",
+                    "provenance": [
+                        72,
+                        74
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "motrin 800 milligrams every six hours with food",
+                    "reason": "right knee pain",
+                    "provenance": [
+                        7,
+                        76,
+                        77
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N036_aci_train",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "ibuprofen six hundred every six hours",
+                    "reason": "bilateral carpal tunnel syndrome",
+                    "provenance": [
+                        37,
+                        39
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "milligrams",
+                    "reason": null,
+                    "provenance": [
+                        39
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "see you back two weeks",
+                    "reason": "bilateral carpal tunnel syndrome",
+                    "provenance": [
+                        37,
+                        39
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N202_aci_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "imaging",
+                    "description": "mri of that right shoulder right shoulder",
+                    "reason": "most likely due to rotator cuff tendinopathy",
+                    "provenance": [
+                        27
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "tylenol",
+                    "reason": "right shoulder pain",
+                    "provenance": [
+                        3,
+                        27
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "see you again two weeks",
+                    "reason": null,
+                    "provenance": [
+                        29
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N172_virtassist_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "zoloft 50 milligrams a day",
+                    "reason": "history of depression",
+                    "provenance": [
+                        7,
+                        21
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "see you back about a month three months",
+                    "reason": null,
+                    "provenance": [
+                        84
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "see you back",
+                    "reason": null,
+                    "provenance": [
+                        84
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N033_aci_train",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "metformin five hundred",
+                    "reason": "diabetes",
+                    "provenance": [
+                        19,
+                        35
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "milligrams",
+                    "reason": null,
+                    "provenance": [
+                        35
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "mobic",
+                    "reason": "ight knee torn or injured mcl",
+                    "provenance": [
+                        7,
+                        33
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "mri",
+                    "reason": "ight knee see if there's any other damage to the knee",
+                    "provenance": [
+                        7,
+                        33
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "mri",
+                    "reason": null,
+                    "provenance": [
+                        33
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "hemoglobin a1c",
+                    "reason": "diabetes",
+                    "provenance": [
+                        19,
+                        35
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N194_aci_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "imaging",
+                    "description": "mri of your shoulder shoulder",
+                    "reason": "most likely due to rotator cuff tendinopathy",
+                    "provenance": [
+                        39
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "see you two weeks",
+                    "reason": null,
+                    "provenance": [
+                        44
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N013_virtassist_train",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "hemoglobin a1c",
+                    "reason": "diabetes",
+                    "provenance": [
+                        54,
+                        58
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N071_virtassist_valid",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "blood work",
+                    "reason": "annual exam .",
+                    "provenance": [
+                        5,
+                        92
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "prozac 20 milligrams a day",
+                    "reason": "depression",
+                    "provenance": [
+                        73,
+                        77
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "echocardiogram",
+                    "reason": "slight two out of six systolic ejection murmur",
+                    "provenance": [
+                        60,
+                        90
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N048_aci_train",
+            "expected_orders": [
+                {
+                    "order_type": "imaging",
+                    "description": "mri",
+                    "reason": "right foot further assess the fracture and any injury to the ligaments",
+                    "provenance": [
+                        32
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_5_1",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "anti-inflammatories",
+                    "reason": "sound quite like a migraine",
+                    "provenance": [
+                        114,
+                        118
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_5_6",
+            "expected_orders": []
+        },
+        {
+            "id": "acibench_D2N159_aci_clinicalnlp_taskC_test2",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "ibuprofens but i would like you to go up six hundred milligrams four times a day",
+                    "reason": "carpal tunnel syndrome",
+                    "provenance": [
+                        33,
+                        35
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N004_virtassist_train",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "hemoglobin a1c couple months",
+                    "reason": "type 2 diabetes",
+                    "provenance": [
+                        145,
+                        148
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "lisinopril 20 milligrams once a day",
+                    "reason": "congestive heart failure",
+                    "provenance": [
+                        8,
+                        159
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "see you again couple weeks",
+                    "reason": null,
+                    "provenance": [
+                        162
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "meloxicam 15 milligrams once a day",
+                    "reason": "acute lumbar , um , strain",
+                    "provenance": [
+                        134,
+                        136
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "metformin 1,000 milligrams twice daily",
+                    "reason": "type 2 diabetes",
+                    "provenance": [
+                        145
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N180_virtscribe_clef_taskC_test3",
+            "expected_orders": []
+        },
+        {
+            "id": "primock57_5_2",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "antibiotics three days",
+                    "reason": "might have an infection in your urine",
+                    "provenance": [
+                        106,
+                        118,
+                        120
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N143_virtscribe_clinicalnlp_taskC_test2",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "swabs gonorrhea",
+                    "reason": "screen for std",
+                    "provenance": [
+                        70,
+                        73,
+                        80
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "swabs chlamydia",
+                    "reason": "screen for std",
+                    "provenance": [
+                        70,
+                        73,
+                        80
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "swabs trichomoniasis",
+                    "reason": "screen for std",
+                    "provenance": [
+                        70,
+                        73,
+                        80
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood syphilis",
+                    "reason": "screen for std",
+                    "provenance": [
+                        73,
+                        80
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood hiv",
+                    "reason": "screen for std",
+                    "provenance": [
+                        73,
+                        80
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood hepatitis c.",
+                    "reason": "screen for std",
+                    "provenance": [
+                        73,
+                        80
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N147_aci_clinicalnlp_taskC_test2",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "meloxicam once a day",
+                    "reason": "right shoulder injury for your acute acromioclavicular joint fracture",
+                    "provenance": [
+                        43
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "fifteen",
+                    "reason": null,
+                    "provenance": [
+                        43
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "milligrams",
+                    "reason": null,
+                    "provenance": [
+                        43
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "cat scan of your right shoulder right shoulder",
+                    "reason": null,
+                    "provenance": [
+                        43
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_2_7",
+            "expected_orders": []
+        },
+        {
+            "id": "acibench_D2N127_aci_clinicalnlp_taskB_test1",
+            "expected_orders": [
+                {
+                    "order_type": "imaging",
+                    "description": "mri",
+                    "reason": "neck sprain",
+                    "provenance": [
+                        61,
+                        71
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "robaxin fifteen hundred milligrams every six to eight hours",
+                    "reason": "neck sprain",
+                    "provenance": [
+                        61,
+                        73,
+                        75
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N175_virtassist_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "today blood cbc",
+                    "reason": null,
+                    "provenance": [
+                        96,
+                        97
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "today blood cmp",
+                    "reason": null,
+                    "provenance": [
+                        96,
+                        97
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "today blood lipid panel",
+                    "reason": null,
+                    "provenance": [
+                        96,
+                        97
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "jardiance 10 milligrams a day",
+                    "reason": "diabetes",
+                    "provenance": [
+                        12,
+                        98
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N056_aci_train",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "oral steroid",
+                    "reason": "consistent with a condition we call hypersensitivity pneumonitis",
+                    "provenance": [
+                        33
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "cat scan of your lungs lungs",
+                    "reason": "consistent with a condition we call hypersensitivity pneumonitis",
+                    "provenance": [
+                        33
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_3_9",
+            "expected_orders": []
+        },
+        {
+            "id": "acibench_D2N154_aci_clinicalnlp_taskC_test2",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "ibuprofen three tablets every six hours",
+                    "reason": "achilles tendinitis",
+                    "provenance": [
+                        43
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "advil three tablets every six hours",
+                    "reason": "achilles tendinitis",
+                    "provenance": [
+                        43
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "come back to me week to ten days following your first couple physical therapy appointments",
+                    "reason": null,
+                    "provenance": [
+                        43
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N201_aci_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "spinal injection corticosteroid",
+                    "reason": "chronic lumbar back pain",
+                    "provenance": [
+                        83
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N084_aci_valid",
+            "expected_orders": [
+                {
+                    "order_type": "imaging",
+                    "description": "renal artery ultrasound ultrasound",
+                    "reason": "to make sure that we're not missing anything",
+                    "provenance": [
+                        33
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N179_virtscribe_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "followup",
+                    "description": "follow-up",
+                    "reason": null,
+                    "provenance": [
+                        73
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N138_virtscribe_clinicalnlp_taskC_test2",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "inhaler put the wixela off to the side wixela",
+                    "reason": null,
+                    "provenance": [
+                        25,
+                        174
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "four months re-check",
+                    "reason": "asthma",
+                    "provenance": [
+                        3,
+                        200
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "albuterol inhaler",
+                    "reason": "asthma if you need it",
+                    "provenance": [
+                        3,
+                        25,
+                        195
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "epipen",
+                    "reason": "peanut allergy",
+                    "provenance": [
+                        6,
+                        94
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "alvesco two puffs in the morning at night 80 mcg",
+                    "reason": "asthma",
+                    "provenance": [
+                        3,
+                        158,
+                        159,
+                        171
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N045_aci_train",
+            "expected_orders": [
+                {
+                    "order_type": "followup",
+                    "description": "follow up two weeks",
+                    "reason": null,
+                    "provenance": [
+                        27
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N195_aci_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "milligrams meloxicam fifteen",
+                    "reason": "right knee pain right knee also have some edema some little bit of swelling",
+                    "provenance": [
+                        1,
+                        25,
+                        45
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "right knee mri as well for that knee",
+                    "reason": "mcl strain",
+                    "provenance": [
+                        1,
+                        45
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "see you back two weeks",
+                    "reason": null,
+                    "provenance": [
+                        47
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "milligrams norvasc daily up your norvasta five milligrams",
+                    "reason": "hypertension",
+                    "provenance": [
+                        1,
+                        25,
+                        47
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_2_3",
+            "expected_orders": []
+        },
+        {
+            "id": "acibench_D2N078_aci_valid",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "ibuprofen eight hundred milligrams twice a day",
+                    "reason": "right medial collateral ligament strain",
+                    "provenance": [
+                        35
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N137_virtassist_clinicalnlp_taskC_test2",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "lisinopril 10 milligrams once a day",
+                    "reason": "hypertension",
+                    "provenance": [
+                        85,
+                        87
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "come back in a month",
+                    "reason": null,
+                    "provenance": [
+                        88
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_1_9",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "Nitrofurantoin three day course one tablet twice a day",
+                    "reason": "probably do have what we call a simple UTI bladder infection",
+                    "provenance": [
+                        141,
+                        145,
+                        146,
+                        147
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "Trimethoprim three day course one tablet twice a day",
+                    "reason": "probably do have what we call a simple UTI bladder infection",
+                    "provenance": [
+                        141,
+                        145,
+                        146,
+                        147
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_1_11",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "Paracetamol",
+                    "reason": "tummy pain fevers",
+                    "provenance": [
+                        54,
+                        112,
+                        259
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_5_3",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "blood tests",
+                    "reason": null,
+                    "provenance": [
+                        163
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N116_aci_clinicalnlp_taskB_test1",
+            "expected_orders": [
+                {
+                    "order_type": "imaging",
+                    "description": "left shoulder mri",
+                    "reason": "most likely due to this rotator cuff rotator cuff tendinopathy",
+                    "provenance": [
+                        28
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N184_virtscribe_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "followup",
+                    "description": "six weeks visit'll just be to check in",
+                    "reason": null,
+                    "provenance": [
+                        45,
+                        47
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N117_aci_clinicalnlp_taskB_test1",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "milligrams metformin one thousand twice per day",
+                    "reason": "diabetes type two",
+                    "provenance": [
+                        51
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "hemoglobin a1c level blood today",
+                    "reason": "diabetes type two",
+                    "provenance": [
+                        51
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "cbc blood today",
+                    "reason": null,
+                    "provenance": [
+                        51
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood chem-12",
+                    "reason": null,
+                    "provenance": [
+                        51
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "as needed albuterol",
+                    "reason": "mild acute intermittent asthma",
+                    "provenance": [
+                        39,
+                        51
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "ultram fifty milligrams once per day",
+                    "reason": "elbow pain",
+                    "provenance": [
+                        51
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "follow-up four weeks",
+                    "reason": "acute lateral epicondylitis of your right elbow",
+                    "provenance": [
+                        51
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N087_aci_valid",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "blood lipid panel",
+                    "reason": "make sure that everything is okay with your cholesterol",
+                    "provenance": [
+                        73,
+                        74
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood hemoglobin a1c",
+                    "reason": "diabetes",
+                    "provenance": [
+                        73,
+                        76
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood basic metabolic panel",
+                    "reason": "make sure that your kidney function is stable",
+                    "provenance": [
+                        73,
+                        78
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "doxycycline one hundred milligrams twice a day about three weeks oral",
+                    "reason": null,
+                    "provenance": [
+                        68,
+                        69,
+                        74
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "lyme titer blood",
+                    "reason": "concern is that you might have lyme disease",
+                    "provenance": [
+                        68,
+                        69,
+                        73
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "western blot blood",
+                    "reason": "concern is that you might have lyme disease",
+                    "provenance": [
+                        68,
+                        69,
+                        73
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N058_aci_train",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "aldactone milligrams daily",
+                    "reason": "reduced left ventricular dysfunction moderate mitral regurgitation",
+                    "provenance": [
+                        39,
+                        40
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "echocardiogram",
+                    "reason": "reduced left ventricular dysfunction moderate mitral regurgitation",
+                    "provenance": [
+                        39,
+                        40
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N003_virtassist_train",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "protonix 40 milligrams daily",
+                    "reason": "acid reflux",
+                    "provenance": [
+                        45,
+                        105
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "ct scan without contrast of your abdomen and pelvis without contrast abdomen pelvis",
+                    "reason": "kidney stones",
+                    "provenance": [
+                        87,
+                        88
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "ultram 50 milligrams as needed every six hours",
+                    "reason": "back pain kidney stones",
+                    "provenance": [
+                        87,
+                        91
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N163_aci_clinicalnlp_taskC_test2",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "full cholesterol panel",
+                    "reason": "hypercholesterolemia",
+                    "provenance": [
+                        1,
+                        49
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "glucose",
+                    "reason": null,
+                    "provenance": [
+                        49
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "complete metabolic panel",
+                    "reason": null,
+                    "provenance": [
+                        49
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "thyroid studies",
+                    "reason": null,
+                    "provenance": [
+                        49
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "liver panels",
+                    "reason": null,
+                    "provenance": [
+                        49
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "cholesterol level in three to six months",
+                    "reason": null,
+                    "provenance": [
+                        51
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N100_virtscribe_clinicalnlp_taskB_test1",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "topical adapalene 0.1 % cream start off using this a few nights a week and slowly work up to using it every night",
+                    "reason": "acne located on the face",
+                    "provenance": [
+                        3,
+                        60,
+                        64,
+                        65
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N106_aci_clinicalnlp_taskB_test1",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "singulair ten milligrams once daily",
+                    "reason": "allergic asthma",
+                    "provenance": [
+                        56,
+                        58
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "see you next week",
+                    "reason": null,
+                    "provenance": [
+                        62
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N141_virtscribe_clinicalnlp_taskC_test2",
+            "expected_orders": [
+                {
+                    "order_type": "followup",
+                    "description": "come back three months",
+                    "reason": "adult hydrocephalus",
+                    "provenance": [
+                        50,
+                        72,
+                        104
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N139_virtscribe_clinicalnlp_taskC_test2",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "blood sodium",
+                    "reason": "hypertension",
+                    "provenance": [
+                        3,
+                        105,
+                        157
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood in two weeks metabolic panel",
+                    "reason": "hypertension",
+                    "provenance": [
+                        3,
+                        105,
+                        158
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "spironolactone",
+                    "reason": "hypertension",
+                    "provenance": [
+                        3,
+                        88
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "followup two weeks",
+                    "reason": "to check your blood pressure electrolytes",
+                    "provenance": [
+                        131
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood in two weeks electrolytes",
+                    "reason": null,
+                    "provenance": [
+                        105,
+                        131
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N029_virtscribe_train",
+            "expected_orders": [
+                {
+                    "order_type": "imaging",
+                    "description": "ultrasound",
+                    "reason": "intermediate thickness melanoma to rule out metastatic disease",
+                    "provenance": [
+                        94,
+                        96
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N052_aci_train",
+            "expected_orders": [
+                {
+                    "order_type": "followup",
+                    "description": "see you back a week to two weeks",
+                    "reason": "kidney stone on the right",
+                    "provenance": [
+                        27,
+                        29
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "ibuprofen eight hundred milligrams",
+                    "reason": "pain",
+                    "provenance": [
+                        29
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "bmp",
+                    "reason": "kidney stone on the right",
+                    "provenance": [
+                        27,
+                        29
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "urinalysis urine",
+                    "reason": "kidney stone on the right",
+                    "provenance": [
+                        27,
+                        29
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "urine culture",
+                    "reason": "kidney stone on the right",
+                    "provenance": [
+                        27,
+                        29
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N192_aci_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "blood today cbc",
+                    "reason": "concerned maybe a sign of some gallstones or possibly even an infection in your gallbladder",
+                    "provenance": [
+                        47
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood today chem twelve",
+                    "reason": "concerned maybe a sign of some gallstones or possibly even an infection in your gallbladder",
+                    "provenance": [
+                        47
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "today urinalysis",
+                    "reason": "concerned maybe a sign of some gallstones or possibly even an infection in your gallbladder",
+                    "provenance": [
+                        47
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "today pregnancy test",
+                    "reason": null,
+                    "provenance": [
+                        47
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "ultrasound right upper quadrant ultrasound",
+                    "reason": "concerned maybe a sign of some gallstones or possibly even an infection in your gallbladder",
+                    "provenance": [
+                        47
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "sumatriptan",
+                    "reason": "breakthrough migraine pain",
+                    "provenance": [
+                        49
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "see you back four weeks",
+                    "reason": null,
+                    "provenance": [
+                        53
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "lisinopril twenty milligrams per day",
+                    "reason": "hypertension",
+                    "provenance": [
+                        1,
+                        41
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N171_virtassist_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "lipid panel",
+                    "reason": "coronary artery disease",
+                    "provenance": [
+                        9,
+                        74
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "crestor 20 mg once a day",
+                    "reason": "coronary artery disease",
+                    "provenance": [
+                        9,
+                        74
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N134_virtassist_clinicalnlp_taskC_test2",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "hemoglobin a1c",
+                    "reason": "type 2 diabetes",
+                    "provenance": [
+                        112
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "lipid panel",
+                    "reason": null,
+                    "provenance": [
+                        117
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "lisinopril 10 milligrams daily",
+                    "reason": "hypertension",
+                    "provenance": [
+                        117,
+                        123
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "doxycycline 100 milligrams twice a day for three weeks",
+                    "reason": "lyme disease",
+                    "provenance": [
+                        106,
+                        107
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "next week follow-up",
+                    "reason": null,
+                    "provenance": [
+                        110
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N097_virtassist_clinicalnlp_taskB_test1",
+            "expected_orders": [
+                {
+                    "order_type": "imaging",
+                    "description": "mammogram",
+                    "reason": null,
+                    "provenance": [
+                        78
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N123_aci_clinicalnlp_taskB_test1",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "blood kidney function",
+                    "reason": "diabetes",
+                    "provenance": [
+                        1,
+                        28
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "come back about a month",
+                    "reason": null,
+                    "provenance": [
+                        28
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "a refill norvasc",
+                    "reason": "high blood pressure",
+                    "provenance": [
+                        1,
+                        32
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "hemoglobin a1c blood",
+                    "reason": "diabetes",
+                    "provenance": [
+                        1,
+                        24,
+                        28
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "prilosec twenty milligrams once a day",
+                    "reason": "if you have reflux",
+                    "provenance": [
+                        26
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_1_7",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "Paracetamol",
+                    "reason": null,
+                    "provenance": [
+                        263
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "maybe use in next, twenty four to forty eight hours, if your symptoms don't get better Amoxicillin One tablet three times a day",
+                    "reason": null,
+                    "provenance": [
+                        268,
+                        273,
+                        274
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N111_aci_clinicalnlp_taskB_test1",
+            "expected_orders": [
+                {
+                    "order_type": "imaging",
+                    "description": "echo",
+                    "reason": "hypertension",
+                    "provenance": [
+                        61
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "a1c",
+                    "reason": "diabetes",
+                    "provenance": [
+                        61
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "lipid",
+                    "reason": "in case we need to make any adjustments to that medication",
+                    "provenance": [
+                        61
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "meloxicam fifteen milligrams daily",
+                    "reason": "right knee pain swelling",
+                    "provenance": [
+                        61
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N032_virtscribe_train",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "nsaids",
+                    "reason": "right hip degenerative joint disease",
+                    "provenance": [
+                        162,
+                        167
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N166_aci_clinicalnlp_taskC_test2",
+            "expected_orders": []
+        },
+        {
+            "id": "acibench_D2N035_aci_train",
+            "expected_orders": [
+                {
+                    "order_type": "followup",
+                    "description": "see you again three months",
+                    "reason": null,
+                    "provenance": [
+                        54
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "renal artery ultrasound ultrasound",
+                    "reason": "uncontrolled hypertension",
+                    "provenance": [
+                        52,
+                        54
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "labs",
+                    "reason": "kidney disease make sure you tolerate this the new medications",
+                    "provenance": [
+                        54
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N062_aci_train",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "protonix forty milligrams once a day take it the first thing in the morning",
+                    "reason": "acute esophagitis",
+                    "provenance": [
+                        23
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "carafate one gram four times a day one month",
+                    "reason": "acute esophagitis",
+                    "provenance": [
+                        23
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N129_virtassist_clinicalnlp_taskC_test2",
+            "expected_orders": [
+                {
+                    "order_type": "followup",
+                    "description": "come back and see you two months",
+                    "reason": "diabetes little out of control",
+                    "provenance": [
+                        103,
+                        104,
+                        112
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N170_virtassist_clef_taskC_test3",
+            "expected_orders": []
+        },
+        {
+            "id": "primock57_2_2",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "blood check for inflammatory markers",
+                    "reason": "to check for other types of uh, causes of joint swelling",
+                    "provenance": [
+                        131,
+                        136
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood rheumatological antibodies",
+                    "reason": "to check for other types of uh, causes of joint swelling",
+                    "provenance": [
+                        131,
+                        136
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood check for things like Gout",
+                    "reason": "to check for other types of uh, causes of joint swelling",
+                    "provenance": [
+                        131,
+                        137
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "follow-up if it's more convenient for you do, to do it over the phone, we can do that over the phone, uh, over video",
+                    "reason": "where we can have a look at your joint, feel it, we can review the blood test.",
+                    "provenance": [
+                        145,
+                        201
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "Ibuprofen four hundred milligrams two times a day. take that after food, not on an empty stomach",
+                    "reason": "seems like uh, what we call the Bursitis",
+                    "provenance": [
+                        126,
+                        189,
+                        190,
+                        191
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N009_virtassist_train",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "stop the ibuprofen",
+                    "reason": null,
+                    "provenance": [
+                        93
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "lumbar mri",
+                    "reason": "lumbar strain",
+                    "provenance": [
+                        83,
+                        84
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "meloxicam 15 milligrams once a day",
+                    "reason": "lumbar strain",
+                    "provenance": [
+                        83,
+                        89
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "ultram 50 milligrams every four hours as needed",
+                    "reason": "lumbar strain",
+                    "provenance": [
+                        83,
+                        89
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_2_4",
+            "expected_orders": []
+        },
+        {
+            "id": "acibench_D2N186_aci_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "meloxicam",
+                    "reason": "left side low back pain",
+                    "provenance": [
+                        15,
+                        53
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "demerol",
+                    "reason": "left side low back pain",
+                    "provenance": [
+                        15,
+                        57
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N050_aci_train",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "urine culture",
+                    "reason": "kidney stone",
+                    "provenance": [
+                        19
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "see you back one to two weeks",
+                    "reason": "kidney stone",
+                    "provenance": [
+                        19
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "oxycodone five milligrams every six to eight hours",
+                    "reason": "pain",
+                    "provenance": [
+                        19
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "bmp",
+                    "reason": "kidney stone",
+                    "provenance": [
+                        19
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "urinalysis urine",
+                    "reason": "kidney stone",
+                    "provenance": [
+                        19
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N198_aci_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "followup",
+                    "description": "come back week",
+                    "reason": null,
+                    "provenance": [
+                        69
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "lipid panel blood fasting",
+                    "reason": null,
+                    "provenance": [
+                        49,
+                        55
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "ua",
+                    "reason": null,
+                    "provenance": [
+                        49
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "cmp blood",
+                    "reason": null,
+                    "provenance": [
+                        49,
+                        55
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "cbc blood",
+                    "reason": null,
+                    "provenance": [
+                        49,
+                        55
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "vitamin d blood",
+                    "reason": null,
+                    "provenance": [
+                        49,
+                        55
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "tsh blood",
+                    "reason": null,
+                    "provenance": [
+                        49,
+                        55
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N161_aci_clinicalnlp_taskC_test2",
+            "expected_orders": [
+                {
+                    "order_type": "imaging",
+                    "description": "renal artery ultrasound ultrasound",
+                    "reason": "to be sure that we are n't missing anything we wan na make sure there's no other causes like secondary causes that that's gon na cause some problems with your with your kidney",
+                    "provenance": [
+                        27
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood work",
+                    "reason": "make sure that you tolerate this regimen",
+                    "provenance": [
+                        29
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "see you again in three months",
+                    "reason": null,
+                    "provenance": [
+                        33
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N112_aci_clinicalnlp_taskB_test1",
+            "expected_orders": [
+                {
+                    "order_type": "followup",
+                    "description": "see me a month",
+                    "reason": null,
+                    "provenance": [
+                        31
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_5_7",
+            "expected_orders": []
+        },
+        {
+            "id": "acibench_D2N051_aci_train",
+            "expected_orders": [
+                {
+                    "order_type": "imaging",
+                    "description": "arterial ultrasound ultrasound lower extremities",
+                    "reason": "nonhealing ulcer of your right foot",
+                    "provenance": [
+                        43,
+                        45
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N016_virtassist_train",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "norvasc 10 mg a day",
+                    "reason": "hypertension , i , i do n't believe it's well controlled",
+                    "provenance": [
+                        130,
+                        131
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "heart echocardiogram",
+                    "reason": "hypertension , i , i do n't believe it's well controlled",
+                    "provenance": [
+                        98,
+                        130,
+                        131
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "lipid panel",
+                    "reason": "hypertension , i , i do n't believe it's well controlled",
+                    "provenance": [
+                        130,
+                        131
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N073_virtscribe_valid",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "blood cbc",
+                    "reason": "iron deficiency anemia",
+                    "provenance": [
+                        102,
+                        116,
+                        119
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood iron",
+                    "reason": "iron deficiency anemia",
+                    "provenance": [
+                        102,
+                        116,
+                        119
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood ferritin",
+                    "reason": "iron deficiency anemia",
+                    "provenance": [
+                        102,
+                        116,
+                        119
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood b12",
+                    "reason": "iron deficiency anemia",
+                    "provenance": [
+                        102,
+                        116,
+                        119
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood folate",
+                    "reason": "iron deficiency anemia",
+                    "provenance": [
+                        102,
+                        116,
+                        119
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "ferrous sulfate three hundred , twenty phil- 25 milligrams by mouth with vitamin c found in orange juice for the next 12 weeks",
+                    "reason": "iron deficiency anemia",
+                    "provenance": [
+                        116,
+                        118,
+                        119
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_4_8",
+            "expected_orders": []
+        },
+        {
+            "id": "acibench_D2N006_virtassist_train",
+            "expected_orders": [
+                {
+                    "order_type": "imaging",
+                    "description": "right upper quadrant ultrasound ultrasound",
+                    "reason": "rule out any gallstones",
+                    "provenance": [
+                        124
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "labs",
+                    "reason": null,
+                    "provenance": [
+                        125
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "allopurinol 100 milligrams once daily",
+                    "reason": "gout",
+                    "provenance": [
+                        129,
+                        133
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N181_virtscribe_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "40 milligrams twice daily nexium",
+                    "reason": "gerd",
+                    "provenance": [
+                        89,
+                        90,
+                        102
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N114_aci_clinicalnlp_taskB_test1",
+            "expected_orders": [
+                {
+                    "order_type": "imaging",
+                    "description": "mri of your brain brain mri",
+                    "reason": "concerning for what we call idiopathic intracranial hypertension",
+                    "provenance": [
+                        22,
+                        29
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_3_4",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "inhaler Clenil. four puffs twice a day",
+                    "reason": "asthma attack",
+                    "provenance": [
+                        29,
+                        68,
+                        127,
+                        131
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "inhaler every two to four, four hours salbutamol",
+                    "reason": "asthma attack",
+                    "provenance": [
+                        29,
+                        68,
+                        124,
+                        151
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N066_aci_train",
+            "expected_orders": [
+                {
+                    "order_type": "followup",
+                    "description": "come back in about two weeks",
+                    "reason": null,
+                    "provenance": [
+                        46
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "norvasc",
+                    "reason": null,
+                    "provenance": [
+                        46
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "hydrochlorothiazide ten milligrams once a day",
+                    "reason": "high blood pressure edema in your legs",
+                    "provenance": [
+                        3,
+                        46
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood cbc",
+                    "reason": null,
+                    "provenance": [
+                        46
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood bmp",
+                    "reason": null,
+                    "provenance": [
+                        46
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood kidney function",
+                    "reason": null,
+                    "provenance": [
+                        46
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "chest x-ray x-ray",
+                    "reason": null,
+                    "provenance": [
+                        46
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "hemoglobin a1c blood",
+                    "reason": "diabetes",
+                    "provenance": [
+                        3,
+                        28,
+                        46
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "naprosyn five hundred milligrams twice a day",
+                    "reason": "back pain",
+                    "provenance": [
+                        3,
+                        44
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "flexeril ten milligrams twice a day",
+                    "reason": "back pain",
+                    "provenance": [
+                        3,
+                        44
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N077_aci_valid",
+            "expected_orders": [
+                {
+                    "order_type": "followup",
+                    "description": "in a month come back",
+                    "reason": null,
+                    "provenance": [
+                        78
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "fifty milligrams ultram",
+                    "reason": "colles' fracture fracture appears extra-articular and usually proximal to the radial ulnar joint dorsal angulation of the distal fracture fragment is present to a variable degree if dorsal angulation is severe presenting with a dinner fork deformity ulnar styloid fracture is present",
+                    "provenance": [
+                        54,
+                        60,
+                        82
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "every six hours",
+                    "reason": null,
+                    "provenance": [
+                        60
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N187_aci_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "injection lucentes once a month vitreous portion of the eye",
+                    "reason": "slow the rate of vision decline stop further vision loss",
+                    "provenance": [
+                        29
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N046_aci_train",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "blood ca-125",
+                    "reason": "tests that help me to determine what type of tumor i'm dealing with",
+                    "provenance": [
+                        31
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood hcg",
+                    "reason": "tests that help me to determine what type of tumor i'm dealing with",
+                    "provenance": [
+                        31
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood afp",
+                    "reason": "tests that help me to determine what type of tumor i'm dealing with",
+                    "provenance": [
+                        31
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood ldh",
+                    "reason": "tests that help me to determine what type of tumor i'm dealing with",
+                    "provenance": [
+                        31
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_1_6",
+            "expected_orders": [
+                {
+                    "order_type": "followup",
+                    "description": "come back and see me about a week's time",
+                    "reason": null,
+                    "provenance": [
+                        232
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "Furosemide one tablet twice a day",
+                    "reason": "heart failure",
+                    "provenance": [
+                        198,
+                        205,
+                        231
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "echocardiogram heart",
+                    "reason": "heart failure",
+                    "provenance": [
+                        198,
+                        212
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood full blood count",
+                    "reason": "look for signs of anemia",
+                    "provenance": [
+                        212,
+                        229
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood check of your kidney function",
+                    "reason": null,
+                    "provenance": [
+                        212,
+                        230
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N019_virtassist_train",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "motrin 800 milligrams every six hours 30",
+                    "reason": "right lateral epicondylitis",
+                    "provenance": [
+                        5,
+                        75,
+                        77,
+                        83
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N176_virtassist_clef_taskC_test3",
+            "expected_orders": []
+        },
+        {
+            "id": "acibench_D2N064_aci_train",
+            "expected_orders": [
+                {
+                    "order_type": "followup",
+                    "description": "follow up two weeks",
+                    "reason": "sprain of the lateral ligament complex",
+                    "provenance": [
+                        23
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N083_aci_valid",
+            "expected_orders": [
+                {
+                    "order_type": "followup",
+                    "description": "see you in a week",
+                    "reason": null,
+                    "provenance": [
+                        34
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "ibuprofen six hundred milligrams q.6 h. with food for a full week",
+                    "reason": "medial epicondylitis",
+                    "provenance": [
+                        33,
+                        34
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N021_virtscribe_train",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "phexxi apply it before intercourse",
+                    "reason": null,
+                    "provenance": [
+                        212,
+                        214
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "liver enzymes",
+                    "reason": "abnormal liver enzymes",
+                    "provenance": [
+                        225
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "apply it at night benzoyl peroxide",
+                    "reason": "acne vulgaris",
+                    "provenance": [
+                        198,
+                        229
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "topical clindamycin",
+                    "reason": "acne vulgaris",
+                    "provenance": [
+                        197,
+                        229
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "total cholesterol",
+                    "reason": "cholesterol was quite high",
+                    "provenance": [
+                        111,
+                        112
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "next visit",
+                    "reason": null,
+                    "provenance": [
+                        231
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "screen for diabetes",
+                    "reason": null,
+                    "provenance": [
+                        117
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "pituitary hormones",
+                    "reason": "hyperthyroidism",
+                    "provenance": [
+                        122,
+                        230
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "iron levels",
+                    "reason": null,
+                    "provenance": [
+                        122
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "vitamin d 2000 iu daily",
+                    "reason": "vitamin d deficiency",
+                    "provenance": [
+                        207
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N153_aci_clinicalnlp_taskC_test2",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "meloxicam fifteen milligrams once a day",
+                    "reason": "lateral a lateral collateral ligament strain",
+                    "provenance": [
+                        48
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N094_virtassist_clinicalnlp_taskB_test1",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "mobic 15 milligrams once a day 14",
+                    "reason": "sprain of your distar- distal interphalangeal joint right index finger",
+                    "provenance": [
+                        61,
+                        62,
+                        63,
+                        64,
+                        65
+                    ]
+                },
+                {
+                    "order_type": "followup",
+                    "description": "come back in two weeks",
+                    "reason": null,
+                    "provenance": [
+                        66
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N193_aci_clef_taskC_test3",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "coricidin hbp",
+                    "reason": "cough",
+                    "provenance": [
+                        57
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "hydrochlorothiazide twenty five milligrams once a day in the morning",
+                    "reason": "high blood pressure",
+                    "provenance": [
+                        61
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "covid today",
+                    "reason": null,
+                    "provenance": [
+                        57,
+                        59
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood next visit hemoglobin a1c",
+                    "reason": "type two diabetes",
+                    "provenance": [
+                        61
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N001_virtassist_train",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "lipid panel",
+                    "reason": "cholesterol was like , a tiny bit high",
+                    "provenance": [
+                        97
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "echocardiogram",
+                    "reason": null,
+                    "provenance": [
+                        108
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "mammogram",
+                    "reason": "annual exam",
+                    "provenance": [
+                        125
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "lisinopril 40 milligrams a day",
+                    "reason": "hypertension",
+                    "provenance": [
+                        103,
+                        117
+                    ]
+                },
+                {
+                    "order_type": "medication",
+                    "description": "lasix 20 milligrams a day",
+                    "reason": "congestive heart failure",
+                    "provenance": [
+                        102,
+                        105
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_2_8",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "blood thick and thin blood films",
+                    "reason": "need to think about things like malaria or other exotic infections",
+                    "provenance": [
+                        151,
+                        160,
+                        168
+                    ]
+                },
+                {
+                    "order_type": "lab",
+                    "description": "blood inflammatory markers",
+                    "reason": "have they got chest infection have they got a throat infection need to think about things like malaria or other exotic infections",
+                    "provenance": [
+                        151,
+                        155,
+                        160,
+                        169
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N144_virtscribe_clinicalnlp_taskC_test2",
+            "expected_orders": [
+                {
+                    "order_type": "lab",
+                    "description": "cmp couple of months blood",
+                    "reason": "high-risk medication",
+                    "provenance": [
+                        77,
+                        78
+                    ]
+                },
+                {
+                    "order_type": "imaging",
+                    "description": "x-ray of that knee knee",
+                    "reason": "rheumatoid arthritis swelling",
+                    "provenance": [
+                        2,
+                        50
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "primock57_3_5",
+            "expected_orders": [
+                {
+                    "order_type": "medication",
+                    "description": "paracetamol one tablet three times a day ten days worth.",
+                    "reason": "labyrinthitis",
+                    "provenance": [
+                        101,
+                        109,
+                        123,
+                        124
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "acibench_D2N132_virtassist_clinicalnlp_taskC_test2",
+            "expected_orders": []
+        }
+    ]
+}
