@@ -17,7 +17,7 @@ def process_list(obj: any) -> List[int]:
     else:
         print(f"Warning: {obj} is not a list but {type(obj)}")
         raise ValueError(f"Unsupported type: {type(obj)}")
-    
+
 @dataclass
 class MultiLabel(Metric):
     name: str = "MultiLabel"
