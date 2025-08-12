@@ -101,7 +101,7 @@ def evaluate(
     output_dir: str,
     truth_file: Union[str, None] = None,
     pred_file: Union[str, None] = None,
-    dataset: Optional[str] = None
+    dataset: Union[str, None] = None
 ):
     """Evaluation pipeline."""
 
@@ -197,7 +197,7 @@ def evaluate(
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate order extraction with simplified approach")
     parser.add_argument("-t", "--truth", type=str, help="Truth file")
-    parser.add_argument("-d", "--dataset", type=str, help="train or dev", default=None)
+    parser.add_argument("-d", "--dataset", type=str, help="train or dev")
     parser.add_argument("-p", "--pred", type=str, help="Prediction file")
     parser.add_argument("-o", "--output", type=str, default="test", help="Output directory path, default no output export")
     parser.add_argument("--debug", action="store_true", help="Set logging level to debug.")

@@ -1,3 +1,5 @@
+openai
+azure-identity
 TextGrid==1.5
 tqdm==4.62.3
 nltk
