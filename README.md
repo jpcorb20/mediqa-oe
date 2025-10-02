@@ -1,4 +1,4 @@
-S# MEDIQA-OE: Medical Order Extraction from Doctor-Patient Dialogs
+# MEDIQA-OE: Medical Order Extraction from Doctor-Patient Dialogs
 Codebase for Order Extraction Tasks as part of MEDIQA-OE @ ClinicalNLP 2025
 
 
@@ -85,6 +85,8 @@ The data here is published under Community Data License Agreement - Permissive -
 If you encounter an issue with attaching transcript. try running the `process_data.py` script with the `--cleanup` flag to remove the downloaded files.
 
 # Cite
+
+If you use this dataset, please cite:
 
 	@article{corbeil2025empowering,
 	  title={Empowering Healthcare Practitioners with Language Models: Structuring Speech Transcripts in Two Real-World Clinical Applications},
