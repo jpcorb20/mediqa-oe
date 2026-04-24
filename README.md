@@ -78,7 +78,7 @@ The script will generate the file `data/orders_data_transcript.json`
 
 Check out `evaluation/README.md` for more information on how to run local evaluation.
 
-# License
+# Data License
 The data here is published under Community Data License Agreement - Permissive - Version 2.0 https://cdla.dev/permissive-2-0/
 
 # Issue
